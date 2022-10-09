@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RuStore</title>
+        <style>
+            body {
+            margin-top: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            }
+            div:first-child {
+            background-color: royalblue;
+            padding: 10px;
+            margin: 0;
+            }
+            img {
+            vertical-align: middle;
+            transition: 0.5s;
+            }
+            img:first-of-type {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            }
+            a {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #000;
+            text-decoration: none;
+            }
+            a:hover {
+            text-decoration: underline;
+            }
+            b {
+            color: #fff;
+            }
+            img:hover {
+            transform: scale(1.5);
+            }
+            button {
+            position: absolute;
+            right: 10px;
+            background-color: royalblue;
+            border-radius: 4px;
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+
+            button:hover {
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+            }
+
+            marquee {
+            padding: 10px;
+            background-color: royalblue;
+            color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+           <img src="logo.webp" width="50">
+           <b>RuStore</b> 
+        </div>
+        <hr>
+        <div>
+            <img src="aliexpress.webp" width="20">
+            <a href="https://www.aliexpress.ru">aliexpress</a>
+            <button onclick="download(this)">Установить</button>
+            <br>
+            <img src="gosuslugi.png" width="20">
+            <a href="https://www.gosuslugi.ru">gosuslugi</a>
+            <button onclick="download(this)">Установить</button>
+        </div>
+        <hr>
+        <marquee>Оф. Сайт картошки ыыыы</marquee>
+
+        <script>
+            function download(button) {
+                button.textContent="Устанавливается...";
+                setTimeout(()=>button.textContent="Установлено!",3000);
+            }
+        </script>
+    </body>
+</html>
